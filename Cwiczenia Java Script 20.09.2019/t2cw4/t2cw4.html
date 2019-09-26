@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <p id="tekst"></p>
+  <script>
+    var kwota =Number(prompt("Ile chcesz wydać pieniędzy podczas piątkowego wieczoru"));
+    if(kwota>=100){
+      document.getElementById("tekst").innerHTML = "Możesz iść na kolację i do kina";
+    }
+    else if(kwota>=50 && kwota<100){
+      document.getElementById("tekst").innerHTML = "Możesz iść na dobrą kolację";
+    }
+    else if(kwota>=25 && kwota<50){
+      document.getElementById("tekst").innerHTML = "Możesz iść do kina";
+    }
+    else{
+      document.getElementById("tekst").innerHTML = "Spędzisz wieczór przed telewizorem";
+    }
+  </script>
+  </body>
+</html>

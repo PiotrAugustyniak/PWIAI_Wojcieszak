@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div id="tekst">
+
+    </div>
+    <script>
+      var figura = prompt("Wybierz figurę \n prostokąt, \n kwadrat, \n koło, \n trapez");
+      switch (figura){
+        case 'prostokąt':{
+          var a = Number(prompt("Podaj a"));
+          var b = Number(prompt("Podaj b"));
+          var wynik = a*b;
+          document.getElementById("tekst").innerHTML = "A: " + a + "<br>";
+          document.getElementById("tekst").innerHTML += "B: " + b + "<br>";
+          document.getElementById("tekst").innerHTML += "Pole prostokątu= " + wynik;
+          break;}
+        case 'kwadrat':{
+          var a = Number(prompt("Podaj a"));
+          var wynik = a*a;
+          document.getElementById("tekst").innerHTML = "A: " + a + "<br>";
+          document.getElementById("tekst").innerHTML += "Pole kwadratu= " + wynik;
+          break;}
+        case 'koło':{
+          var p = 3.14;
+          var r=Number(prompt("Podaj promień koła"));
+          var wynik = 2*p*r;
+          document.getElementById("tekst").innerHTML = "Promień: " + r + "<br>";
+          document.getElementById("tekst").innerHTML += "Pi: " + p + "<br>";
+          document.getElementById("tekst").innerHTML += "Pole koła= " + wynik;
+          break;}
+        case 'trapez':{
+          var a = Number(prompt("Podaj a"));
+          var b = Number(prompt("Podaj b"));
+          var h = Number(prompt("Podaj h"));
+          var wynik = (a+b)*h/2;
+          document.getElementById("tekst").innerHTML = "A: " + a + "<br>";
+          document.getElementById("tekst").innerHTML += "B: " + b + "<br>";
+          document.getElementById("tekst").innerHTML += "H: " + h + "<br>";
+          document.getElementById("tekst").innerHTML += "Pole trapezu= " + wynik;
+          break;}
+          default:{
+            document.getElementById("tekst").innerHTML = "Podałeś niewłaściwą figurę";
+          }
+      }
+    </script>
+  </body>
+</html>

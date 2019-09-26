@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <style media="screen">
+      table{
+        border:10px solid black;
+      }
+      table td{
+        border:2px solid red;
+      }
+    </style>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div id="pole">
+      <table>
+        <tr id="tekst">
+        </tr>
+      </table>
+    </div>
+    <script>
+      for(let i=49;i>10;i--){
+        if(i%4==3) document.getElementById("tekst").innerHTML+="<td>" + i + "</td>"
+      }
+    </script>
+  </body>
+</html>
