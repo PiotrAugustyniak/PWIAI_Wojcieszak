@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <p id="tekst"></p>
+    <script>
+      var n = prompt("Podaj liczbę, której silnie chcesz obliczyć");
+      var il= 1;
+      if(n>0){
+        for(var i=1;i<=n;i++){
+          il*=i;
+        }
+        document.getElementById("tekst").innerHTML="Silnia " + n + "! " + "to: " + il;
+      }else if(n==0){
+        il=1;
+        document.getElementById("tekst").innerHTML = "Silnia " + n + "! " + "to: " + il;
+      }else if(n==1){
+        il=1;
+        "Silnia " + n + "! " + "to: " + il;
+      }else{
+        document.getElementById("tekst").innerHTML="Musi byc to liczba naturalna!";
+      }
+        </script>
+  </body>
+</html>

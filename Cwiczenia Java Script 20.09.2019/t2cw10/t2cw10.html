@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <p id="tekst"></p>
+    <script>
+      var a = Number(prompt("Podaj 1 liczbe"));
+      var b = Number(prompt("Podaj 2 liczbe"));
+      var wynik = a+b;
+      var i = 1;
+      do{
+      var decyzja = prompt("Czy chcesz dodac cos jeszcze tak/nie");
+      if(decyzja == "tak"){
+        var c = Number(prompt("Podaj liczbe"));
+        wynik = wynik+c;
+      }else{
+        i=0;
+        alert("Wynik dodawania to: " + wynik);
+      }
+    }while(i==1);
+    </script>
+  </body>
+</html>
