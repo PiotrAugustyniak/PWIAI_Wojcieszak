@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <form method="post">
+      Podaj hasło
+      <input type="password" id="haslo"/><br/>
+      <button type="button" name="button" onclick="sprawdzanie()">Submit</button>
+      <h3 id="naglowek"></h3>
+      <script>
+        function sprawdzanie(){
+        var haslo123 = "123";
+        var wpisane = document.getElementById("haslo").value;
+        if( haslo123 == wpisane){
+          document.getElementById("naglowek").innerHTML="Haslo poprawne";}
+          else{
+          document.getElementById("naglowek").innerHTML="Haslo niepoprawne";
+        }
+      }
+      </script>
+    </form>
+  </body>
+</html>
