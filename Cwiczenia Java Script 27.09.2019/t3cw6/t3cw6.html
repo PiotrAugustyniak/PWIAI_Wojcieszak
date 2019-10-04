@@ -21,42 +21,41 @@
     </fieldset>
     <script>
       function kalkulator(){
-        if(isNaN(document.getElementById('liczba1').value) || isNaN(document.getElementById('liczba2').value)){
-        alert("Musisz podać liczby głupolu...")}
-        else if(document.getElementById('wyrazyObliczen').value=="+"){
-        var pierwsza = parseInt(document.getElementById('liczba1').value);
-        var druga = parseInt(document.getElementById('liczba2').value);
-        var wynik = pierwsza+druga;
-        document.getElementById('result').innerHTML=wynik;
-      }}
-        if(isNaN(document.getElementById('liczba1').value) || isNaN(document.getElementById('liczba2').value)){
-        alert("Musisz podać liczby głupolu...")}
-        else if(document.getElementById('wyrazyObliczen').value=="-"){
-        var pierwsza = parseInt(document.getElementById('liczba1').value);
-        var druga = parseInt(document.getElementById('liczba2').value);
-        var wynik = pierwsza-druga;
-        document.getElementById('result').innerHTML=wynik;
-      }}
-        else if(document.getElementById('wyrazyObliczen').value=="*"){
-        if(isNaN(document.getElementById('liczba1').value) || isNaN(document.getElementById('liczba2').value)){
-        alert("Musisz podać liczby głupolu...")}
-        else{
-        var pierwsza = parseInt(document.getElementById('liczba1').value);
-        var druga = parseInt(document.getElementById('liczba2').value);
-        if(druga>0 || druga<0)var wynik = pierwsza*druga;
-        else var wynik = 0;
-        document.getElementById('result').innerHTML=wynik;
-      }}
-      function dzielenie(){
-        if(isNaN(document.getElementById('liczba1').value) || isNaN(document.getElementById('liczba2').value)){
-        alert("Musisz podać liczby głupolu...")}
-        else{
-        var pierwsza = parseInt(document.getElementById('liczba1').value);
-        var druga = parseInt(document.getElementById('liczba2').value);
-        if(druga>0 || druga<0)var wynik = pierwsza/druga;
-        else var wynik = 0;
-        document.getElementById('result').innerHTML=wynik;
-      }}
+              if(isNaN(document.getElementById('liczba1').value) || isNaN(document.getElementById('liczba2').value)){
+              alert("Musisz podać liczby głupolu...")}
+              else if(document.getElementById('wyrazyObliczen').value=="+"){
+              var pierwsza = parseInt(document.getElementById('liczba1').value);
+              var druga = parseInt(document.getElementById('liczba2').value);
+              var wynik = pierwsza+druga;
+              document.getElementById('result').innerHTML=wynik;
+              }
+              if(isNaN(document.getElementById('liczba1').value) || isNaN(document.getElementById('liczba2').value)){
+              alert("Musisz podać liczby głupolu...")}
+              else if(document.getElementById('wyrazyObliczen').value=="-"){
+              var pierwsza = parseInt(document.getElementById('liczba1').value);
+              var druga = parseInt(document.getElementById('liczba2').value);
+              var wynik = pierwsza-druga;
+              document.getElementById('result').innerHTML=wynik;
+              }
+              if(isNaN(document.getElementById('liczba1').value) || isNaN(document.getElementById('liczba2').value)){
+              alert("Musisz podać liczby głupolu...")}
+              else if(document.getElementById('wyrazyObliczen').value=="*"){
+              var pierwsza = parseInt(document.getElementById('liczba1').value);
+              var druga = parseInt(document.getElementById('liczba2').value);
+              if(druga>0 || druga<0)var wynik = pierwsza*druga;
+              else var wynik = 0;
+              document.getElementById('result').innerHTML=wynik;
+              }
+              if(isNaN(document.getElementById('liczba1').value) || isNaN(document.getElementById('liczba2').value)){
+              alert("Musisz podać liczby głupolu...")}
+              else if(document.getElementById('wyrazyObliczen').value=="/"){
+              var pierwsza = parseInt(document.getElementById('liczba1').value);
+              var druga = parseInt(document.getElementById('liczba2').value);
+              if(druga>0 || druga<0)var wynik = pierwsza/druga;
+              else var wynik = 0;
+              document.getElementById('result').innerHTML=wynik;
+              }
+    }
     </script>
   </body>
 </html>
