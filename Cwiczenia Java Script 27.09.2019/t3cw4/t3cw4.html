@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <fieldset>
+      <legend>Ulubione kolory</legend>
+      <input type="checkbox" name="kolor123" id="kolor1" value="czerwony">Czerwony
+      <input type="checkbox" name="kolor213" id="kolor2" value="niebieski">Niebieski
+      <input type="checkbox" name="kolor321" id="kolor3" value="zielony">Zielony
+      <input type="button" name="guzior" value="Sprawdz" onclick="myFunction()">
+      Ulubione kolory: <output type="text" name="odpowiedz" id="komunikat">
+    </fieldset>
+    <script>
+      function myFunction(){
+        var zmienna = "";
+        if(document.getElementById('kolor1').checked){
+          var cz = document.getElementById('kolor1').value;
+          document.getElementById('komunikat').innerHTML+=cz+" ";
+          }
+          if(document.getElementById('kolor2').checked){
+          var n = document.getElementById('kolor2').value;
+          document.getElementById('komunikat').innerHTML+=n+" ";
+        }
+        if(document.getElementById('kolor3').checked){
+          var z = document.getElementById('kolor3').value;
+          document.getElementById('komunikat').innerHTML+=z+" ";
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -1,1 +1,27 @@
-trzeba zrobić
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <fieldset>
+      <legend>Płeć</legend>
+      Kobieta <input type="radio" name="plec" id="plec1"value="Kobieta">
+      Mężczyzna <input type="radio" name="plec" id="plec2" value="Mezczyzna">
+      <input type="button" name="guzior" value="Sprawdz" onclick="myFunction()">
+      Komunikat: <output type="text" name="odpowiedz" id="komunikat">
+    </fieldset>
+    <script>
+      function myFunction(){
+        if(document.getElementById('plec1').checked){
+        var p = document.getElementById('plec1').value;
+        document.getElementById('komunikat').innerHTML=p;
+      }else{
+        var p = document.getElementById('plec2').value;
+        document.getElementById('komunikat').innerHTML=p;
+      }
+      }
+    </script>
+  </body>
+</html>
