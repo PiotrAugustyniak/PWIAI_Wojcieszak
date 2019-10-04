@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <fieldset>
+      <legend>Kalkulatorek</legend>
+      Wprowadź liczby do kalkulatorka <br>
+      <input type="text" name="liczba1" id="liczba1">
+      <input type="text" name="liczba2" id="liczba2"><br>
+      <select id="wyrazyObliczen">
+      <option name="guzior+" value="+">Dodawanie</option>
+      <option name="guzior-" value="-">Odejmowanie</option>
+      <option name="guzior*" value="*">Mnożenie</option>
+      <option name="guzior/" value="/">Dzielenie</option>
+      </select><br>
+      <input type="button" name="oblicz" value="Oblicz" onclick="kalkulator()"><br>
+      <output name="result" id="result"></output>
+    </fieldset>
+    <script>
+      function kalkulator(){
+        if(isNaN(document.getElementById('liczba1').value) || isNaN(document.getElementById('liczba2').value)){
+        alert("Musisz podać liczby głupolu...")}
+        else if(document.getElementById('wyrazyObliczen').value=="+"){
+        var pierwsza = parseInt(document.getElementById('liczba1').value);
+        var druga = parseInt(document.getElementById('liczba2').value);
+        var wynik = pierwsza+druga;
+        document.getElementById('result').innerHTML=wynik;
+      }}
+        if(isNaN(document.getElementById('liczba1').value) || isNaN(document.getElementById('liczba2').value)){
+        alert("Musisz podać liczby głupolu...")}
+        else if(document.getElementById('wyrazyObliczen').value=="-"){
+        var pierwsza = parseInt(document.getElementById('liczba1').value);
+        var druga = parseInt(document.getElementById('liczba2').value);
+        var wynik = pierwsza-druga;
+        document.getElementById('result').innerHTML=wynik;
+      }}
+        else if(document.getElementById('wyrazyObliczen').value=="*"){
+        if(isNaN(document.getElementById('liczba1').value) || isNaN(document.getElementById('liczba2').value)){
+        alert("Musisz podać liczby głupolu...")}
+        else{
+        var pierwsza = parseInt(document.getElementById('liczba1').value);
+        var druga = parseInt(document.getElementById('liczba2').value);
+        if(druga>0 || druga<0)var wynik = pierwsza*druga;
+        else var wynik = 0;
+        document.getElementById('result').innerHTML=wynik;
+      }}
+      function dzielenie(){
+        if(isNaN(document.getElementById('liczba1').value) || isNaN(document.getElementById('liczba2').value)){
+        alert("Musisz podać liczby głupolu...")}
+        else{
+        var pierwsza = parseInt(document.getElementById('liczba1').value);
+        var druga = parseInt(document.getElementById('liczba2').value);
+        if(druga>0 || druga<0)var wynik = pierwsza/druga;
+        else var wynik = 0;
+        document.getElementById('result').innerHTML=wynik;
+      }}
+    </script>
+  </body>
+</html>
