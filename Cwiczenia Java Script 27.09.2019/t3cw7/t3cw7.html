@@ -9,26 +9,81 @@
       <fieldset>
       <legend>Formularz</legend>
       Podaj Imię: <input type="text" name="Imie" id="imie"><br>
-      Podaj Nazwisko: <input type="text" name="Nazwisko" id="Nazwisko"><br>
-      Wybierz płeć: <input type="radio" id="plec" name="plec" value="Mężczyzna">Mężczyzna
-      <input type="radio" id="plec" name="plec" value="Kobieta">Kobieta<br>
-      <select id="stanCywilny" placeholder="--wybierz--"name="stanCywilny">
+      Podaj Nazwisko: <input type="text" name="Nazwisko" id="nazwisko"><br>
+      Wybierz płeć: <input type="radio" id="plec1" name="plec" value="Mężczyzna">Mężczyzna
+      <input type="radio" id="plec2" name="plec" value="Kobieta">Kobieta<br>
+      Stan Cywilny: <select id="stanCywilny" name="stanCywilny">
+      <option value="brak wyboru">--wybierz--</option>
       <option value="Panna">Panna</option>
       <option value="Kawaler">Kawaler</option>
       <option value="Rozwiedziony/a">Rozwiedziony/a</option>
       <option value="Wdowiec">Wdowiec</option>
       <option value="Wdowa">Wdowa</option>
       </select><br>
-      <input type="text" id="liczbaDzieci" name="liczbaDzieci"><br>
-      <input type="checkbox" id="Komputery" name="zainteresowanie" value="komputery">Komputery
-      <input type="checkbox" id="Motoryzacja" name="zainteresowanie" value="motoryzacja">Motoryzacja
-      <input type="checkbox" id="Muzyka" name="zainteresowanie" value="muzyka">Muzyka
+      Ile masz dzieci? <input type="text" id="liczbaDzieci" name="liczbaDzieci"><br>
+      Zainteresowania: <input type="checkbox" id="Komputery" name="zainteresowanie" value="Komputery">Komputery
+      <input type="checkbox" id="Motoryzacja" name="zainteresowanie" value="Motoryzacja">Motoryzacja
+      <input type="checkbox" id="Muzyka" name="zainteresowanie" value="Muzyka">Muzyka
       <input type="checkbox" id="Filmy" name="zainteresowanie" value="Filmy">Filmy
-      <input type="checkbox" id="Moda" name="zainteresowanie" value="Moda">Moda
+      <input type="checkbox" id="Moda" name="zainteresowanie" value="Moda">Moda<br>
+      Jesli chcesz cos dodac o sobie: <input type="checkbox" id="Dodatkowe" name="Dodatkowe" value="potezne"><br>
+      <textarea id="tekstArija"placeholder="Kilka zdań o Tobie aniołku kochany"></textarea><br>
+      <input type="button" name="guzior" onclick="myFunction()"value="Podsumuj">
+      <script>
+      var dodatkowe = document.getElementById('Dodatkowe');
+      var tekstArija = document.getElementById('tekstArija');
+      dodatkowe.onchange = function() {
+         if(!dodatkowe.checked) {
+             tekstArija.style.visibility = 'hidden';
+         }
+         else {
+             tekstArija.style.visibility = 'visible';
+         }
+       }
+      </script>
+      <p id="submit"></p>
     </fieldset>
     </form>
     <script>
-      var =
+    function myFunction(){
+          var Imie = document.getElementById('imie').value;
+          var Nazwisko = document.getElementById('nazwisko').value;
+                if(document.getElementById('plec1').checked){
+                var plec = document.getElementById('plec1').value;}
+                else var plec = document.getElementById('plec2').value
+          var stanCywilny = document.getElementById('stanCywilny').value;
+          var liczbaDzieci = document.getElementById('liczbaDzieci').value;
+          var zainteresowania="";
+          var moreinfo = document.getElementById('tekstArija').value;
+                if(document.getElementById('Komputery').checked){
+                  var zainteresowanie = document.getElementById('Komputery').value;
+                  zainteresowania = zainteresowania+" "+zainteresowanie;
+                  }
+                  if(document.getElementById('Motoryzacja').checked){
+                  var zainteresowanie = document.getElementById('Motoryzacja').value;
+                  zainteresowania = zainteresowania+" "+zainteresowanie;
+                }
+                if(document.getElementById('Muzyka').checked){
+                  var zainteresowanie = document.getElementById('Muzyka').value;
+                  zainteresowania = zainteresowania+" "+zainteresowanie;
+                }
+                if(document.getElementById('Filmy').checked){
+                  var zainteresowanie = document.getElementById('Filmy').value;
+                  zainteresowania = zainteresowania+" "+zainteresowanie;
+                }
+                if(document.getElementById('Moda').checked){
+                  var zainteresowanie = document.getElementById('Moda').value;
+                  zainteresowania = zainteresowania+" "+zainteresowanie;
+                }
+                if(Imie=="" || Nazwisko=="") Imie="Nie wpisaleś głupolu";
+                if(document.getElementById('plec1').checked==false && document.getElementById('plec2').checked==false) plec="Gosciu/Gosciaro tak trudno to wybrac?"
+                if(liczbaDzieci=="") liczbaDzieci="Nie wpisaleś głupolu";
+                if(stanCywilny=="--wybierz--") stanCywilny="Naucz sie wybierac opcje";
+                if(zainteresowania=="") zainteresowania="Nie wybrałeś głupolu";
+                if(liczbaDzieci=="") liczbaDzieci="Nie wpisaleś głupolu";
+                if(moreinfo=="") moreinfo="Nie chciało Ci się pisać więcej o sobie leniuchu";
+          document.getElementById('submit').innerHTML="Imię i nazwisko: "+Imie+" "+Nazwisko+"<br>"+"Płeć: "+plec+"<br>"+"Stan cywilny: "+stanCywilny+"<br>"+"Liczba dzieci: "+liczbaDzieci+"<br>"+"Zainteresowania: "+ zainteresowania+"<br>"+"Więcej informacji o osobie: "+moreinfo;
+    }
     </script>
   </body>
 </html>
