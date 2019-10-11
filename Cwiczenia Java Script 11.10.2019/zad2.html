@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <ul>
+      <li>programowanie</li>
+      <li>informatyka</li>
+      <li>witryny i aplikacje</li>
+      <li>muzyka</li>
+    </ul>
+    <p id="akapit"></p>
+    <input type="button" name="guzior" value="wyświetl" onclick="myFunction()"/>
+    <script>
+      function myFunction(){
+        var zawartosc = document.getElementsByTagName("li")[2].textContent;
+        document.getElementById("akapit").innerHTML = zawartosc;
+    }
+    </script>
+  </body>
+</html>

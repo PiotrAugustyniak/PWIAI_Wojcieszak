@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div>DIV</div>
+    <p>Akapit</p>
+    <p>Akapit</p>
+    <div>DIV</div>
+    <p>Akapit</p>
+    <p>Akapit</p>
+    <p>Akapit</p>
+    <div>DIV</div>
+    <p>Akapit</p>
+    <input type="button" value="Guzik" onclick="myFunction()">
+    <script type="text/javascript">
+      function myFunction(){
+        var tablica = document.querySelectorAll("p");
+        for (var i = 0; i < tablica.length; i++) {
+          tablica[i].style.backgroundColor = "purple";
+        }
+    }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+      <style>
+        div{
+          border:2px solid black;
+          margin-bottom:10px;
+          width:300px;
+          height:100px;
+        }
+      </style>
+  </head>
+  <body>
+    <div class="pierwsza">Szkoła z klasą</div>
+    <div class="pierwsza kolor">Szkoła z klasą</div>
+    <div class="pierwsza kolor">Szkoła z klasą</div>
+    <input type="button" name="guzik" value="guzior" onclick="myFunction()">
+    <script>
+      function myFunction(){
+      document.getElementsByClassName("pierwsza kolor")[0].style.backgroundColor = "red";
+    }
+    </script>
+  </body>
+</html>

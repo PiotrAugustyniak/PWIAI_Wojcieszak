@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div>DIV</div>
+    <div>DIV</div>
+    <div>DIV</div>
+    <div>DIV</div>
+    <div>DIV</div>
+    <div>DIV</div>
+    <div>DIV</div>
+    <div>DIV</div>
+    <div>DIV</div>
+    <div>DIV</div>
+    <input type="button" value="Guzik" onclick="myFunction()">
+    <script type="text/javascript">
+      function myFunction(){
+        var tablica = document.querySelectorAll("div");
+        for (var i = 0; i < tablica.length; i+=2) {
+          tablica[i].style.backgroundColor = "#ABCDEF";
+        }
+    }
+    </script>
+  </body>
+</html>
