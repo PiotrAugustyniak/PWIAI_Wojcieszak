@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <style media="screen">
+      *{
+        margin:0;
+        padding:0;
+      }
+    </style>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <p class="nieparzyste">Przykladowy tekst</p>
+    <p class="parzyste">Przykladowy tekst</p>
+    <p class="nieparzyste">Przykladowy tekst</p>
+    <p class="parzyste">Przykladowy tekst</p>
+    <input type="button" value="PARZYSTE" onclick="parzyste()">
+    <input type="button" value="NIEPARZYSTE" onclick="nieparzyste()">
+    <script>
+      function parzyste(){
+        var parzyste = document.getElementsByClassName('parzyste');
+        for (var i = 0; i < parzyste.length; i++) {
+          parzyste[i].style.textAlign = "center";
+          parzyste[i].style.backgroundColor = "red";
+          parzyste[i].style.color = "green";
+          parzyste[i].style.fontStyle = "italic";
+        }
+      }
+      function nieparzyste(){
+        var nieparzyste = document.getElementsByClassName('nieparzyste');
+        document.querySelector(".nieparzyste").style.letterSpacing = "20px";
+        for (var i = 0; i < nieparzyste.length; i++) {
+          nieparzyste[i].style.textAlign = "right";
+          nieparzyste[i].style.backgroundColor = "purple";
+          nieparzyste[i].style.color = "yellow";
+          nieparzyste[i].style.fontVariant = "small-caps";
+        }
+      }
+    </script>
+  </body>
+</html>
