@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Lista zakupów</h1>
+    <ol>
+      <li id="element0"></li>
+      <li id="element1"></li>
+      <li id="element2"></li>
+      <li id="element3"></li>
+      <li id="element4"></li>
+    </ol>
+  </body>
+  <script>
+    var tab = new Array('Mleko', 'Jajka', 'Płatki śniadaniowe', 'Salami', 'Sok');
+    for (var i = 0; i < tab.length; i++) {
+      document.getElementById('element'+i).innerHTML=tab[i];
+    }
+  </script>
+</html>

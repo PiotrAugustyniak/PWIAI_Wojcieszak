@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <p id="apostrof"></p>
+  </body>
+  <script>
+    var tab1= new Array(
+    new Array("Piotr", "Augustyniak", 19, "17.10.2000", "4B"),
+    new Array("Filip", "Kończak", 18, "11.12.2000", "4B"),
+    new Array("Mateusz", "Dopierała", 19, "07.10.2000", "4D")
+    );
+    for (var i = 0; i < tab1.length; i++) {
+      if(i>0)document.getElementById("apostrof").innerHTML+="<br>"
+      for (var j = 0; j < tab1[i].length; j++) {
+        if(j==(tab1[i].length)-1)document.getElementById("apostrof").innerHTML+=tab1[i][j];
+        else document.getElementById("apostrof").innerHTML+=tab1[i][j]+", ";
+      }
+    }
+  </script>
+</html>

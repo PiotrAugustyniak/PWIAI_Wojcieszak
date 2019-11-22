@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <ol id="lista">
+    </ol>
+    <p id="apostrof"></p>
+  </body>
+  <script>
+    var tab=new Array();
+    var n = prompt("ile chcesz rzeczy dodac do listy");
+    for (var i = 0; i < n; i++) {
+      tab[i]=prompt("Rzecz "+(i+1));
+    }
+    tab.sort();
+    for (var i = 0; i < tab.length; i++) {
+      document.getElementById("lista").innerHTML+="<li>"+tab[i]+"</li>";
+    }
+    for (var i = 0; i < tab.length; i++) {
+      if(tab[i]=="Chleb") document.getElementById("apostrof").innerHTML="Masz chleb";
+      else document.getElementById("apostrof").innerHTML="Nie masz chleba glupolu!";
+    }
+
+  </script>
+</html>

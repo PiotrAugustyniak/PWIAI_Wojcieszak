@@ -1,0 +1,29 @@
+*{
+    padding:0;
+    margin:0;
+}
+body{
+    font-family: Arial, sans-serif;
+    color:grey;
+    background-color:grey;
+}
+main{
+    height:500px;
+    width:500px;
+    margin:0 auto;
+    background-color:white;
+    border:2px solid yellow;
+    border-radius:5px;
+}
+#header{
+    display:flex;
+    justify-content:space-between;
+}
+span{
+    padding:20px;
+    font-size:30px;
+}
+#zawartosc{
+    margin-top:50px;
+    margin-left:125px;
+}

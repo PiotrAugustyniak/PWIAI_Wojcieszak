@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <p id="apostrof"></p>
+    <p id="apostrof2"></p>
+  </body>
+  <script>
+    var tab = new Array();
+    var n = prompt("Ile liczb");
+    for (var i = 0; i < n; i++) {
+      tab[i]=prompt("Podaj liczbę " + (i+1));
+    }
+    for (var i = 0; i < tab.length; i++) {
+      if(i==(tab.length)-1)document.getElementById("apostrof").innerHTML+=tab[i];
+      else{
+        document.getElementById("apostrof").innerHTML+=tab[i]+", ";
+      }
+    }
+    tab.reverse();
+    for (var i = 0; i < tab.length; i++) {
+      if(i==(tab.length)-1)document.getElementById("apostrof2").innerHTML+=tab[i];
+      else{
+        document.getElementById("apostrof2").innerHTML+=tab[i]+", ";
+      }
+    }
+  </script>
+</html>

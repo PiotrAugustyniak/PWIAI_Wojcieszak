@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <p id="apostrof"></p>
+  </body>
+  <script>
+    var tab1= new Array(2,4,6,8,10);
+    var tab2= new Array(1,3,5,7,9,11);
+    var tab = tab1.concat(tab2);
+    function sortowanieliczb(a,b){
+      return b-a;
+    }
+    tab.sort(sortowanieliczb);
+    for (var i = 0; i < tab.length; i++) {
+      document.getElementById("apostrof").innerHTML+=tab[i]+" ";
+    }
+  </script>
+</html>

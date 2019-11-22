@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <style>
+      table{
+        border:2px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <tr>
+        <td></td>
+      </tr>
+    </table>
+  </body>
+  <script>
+      var tab = new Array('Piotr','Augustyniak', '19', '170','17.10.2000', '4B');
+      for (var i = 0; i < tab.length; i++) {
+        document.querySelector('td').innerHTML+=tab[i]+", ";
+      }
+  </script>
+</html>

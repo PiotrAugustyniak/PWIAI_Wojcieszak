@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <p id="apostrof"></p>
+  </body>
+  <script>
+    var tab = new Array();
+    var suma = 0;
+    for (var i = 0; i < 5; i++) {
+      tab[i]=parseInt(prompt("Podaj liczbę " + (i+1)));
+    }
+    for (var i = 0; i < tab.length; i++) {
+      suma = suma+tab[i];
+    }
+    document.getElementById("apostrof").innerHTML = suma;
+
+  </script>
+</html>

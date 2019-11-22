@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <p id="apostrof"></p>
+  </body>
+  <script>
+      var tab = new Array('BMW', 'Toyota', 'Opel', 'Skoda');
+      document.getElementById('apostrof').innerHTML="Lubię samochody marki "+ tab[1] + " i "+ tab[2]+ ", nie lubię " + tab[0] + " i " + tab[3];
+      tab.reverse();
+      tab.push('Fiat');
+      tab.reverse();
+      tab.push('KIA');
+      console.log(tab);
+      console.log(tab.length);
+  </script>
+</html>
