@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      #guziorNiebieski{
+        background-color:blue;
+      }
+      #guziorZielony{
+        background-color:green;
+      }
+      #guziorCzerwony{
+        background-color:red;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+    <input type="text"  id="procenty"> Podaj procenta
+    <select id="lista">
+      <option value="normal">prosta</option>
+      <option value="italic">pochylona</option>
+    </select>
+    <input type="button" id="guziorNiebieski" onclick="niebieski()">
+    <input type="button" id="guziorCzerwony" onclick="czerwony()">
+    <input type="button" id="guziorZielony" onclick="zielony()">
+    </form>
+      <p id="apostrof">To jest przyklad lalala:</p>
+  </body>
+  <script>
+      function niebieski(){
+        document.getElementById("apostrof").style.color="blue";
+        rozmiarinachylenie();
+      }
+      function zielony(){
+        document.getElementById("apostrof").style.color="green";
+        rozmiarinachylenie();
+      }
+      function czerwony(){
+        document.getElementById("apostrof").style.color="red";
+        rozmiarinachylenie();
+      }
+      function rozmiarinachylenie(){
+      var n = 100 + Number(document.getElementById("procenty").value);
+        document.getElementById("apostrof").style.fontSize=n+"%";
+        document.getElementById("apostrof").style.fontStyle=document.getElementById("lista").value;
+      }
+  </script>
+</html>

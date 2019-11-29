@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style media="screen">
+      *{
+        padding:0;
+        margin:0;
+      }
+      input[type="text"], select{
+        position:absolute;
+        left:80px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Formularz kontaktowy</h1>
+    <form>
+    <span>Imię:</span><input type="text" id="imie"><br>
+    <span>Nazwisko:</span><input type="text" id="nazwisko"><br>
+    <span>E-mail:</span><input type="text" id="mail"><br>
+    <span>Usługa</span>
+      <select id="usluga">
+        <option value="poz1">naprawa komputera</option>
+        <option value="poz2">naprawa przegladarki</option>
+        <option value="poz3">naprawa programu</option>
+      </select><br>
+      Wyślij kopię wiadomości   <input type="checkbox" name="lalal"><br>
+      <input type="reset"  value="resetuj">
+      <input type="button" value="guzior" onclick="myFunction()">
+      </form>
+      <p id="apostrof"></p>
+  </body>
+  <script>
+    function myFunction(){
+      var imie = document.getElementById("imie").value;
+      var nazwisko = document.getElementById("nazwisko").value;
+      var mail = document.getElementById("mail").value;
+      var usluga = document.getElementById("usluga").value;
+      mail = mail.toLowerCase();
+      document.getElementById("apostrof").innerHTML=imie + " "+ nazwisko + "<br>" + mail + "<br>" + "Usługa: " + usluga;
+    }
+  </script>
+</html>
