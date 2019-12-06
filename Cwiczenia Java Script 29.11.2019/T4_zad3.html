@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Oblicz koszty dostawy</h1>
+    <input type="checkbox" id="jestes" name="jestes" value="">Jestem z zielonej gory
+    <br>albo <br>
+    Podaj liczbę kilometrów od Zielonej Góry <input type="number" id="niejestes" name="niejestes">
+    <input type="button" value="guzior" onclick="myFunction()">
+    <p id="apostrof"></p>
+    <script>
+      function myFunction(){
+        var checkbox = document.getElementById("jestes").checked;
+        if(checkbox == true){
+          document.getElementById("apostrof").innerHTML="Dowieziemy twoją pizzke za darmo";
+        }else{
+          var number = document.getElementById("niejestes").value;
+          var koszt = number*2;
+          document.getElementById("apostrof").innerHTML="Dowóz będzie kosztował: "+koszt+" złotych"
+        }
+
+      }
+
+    </script>
+  </body>
+</html>

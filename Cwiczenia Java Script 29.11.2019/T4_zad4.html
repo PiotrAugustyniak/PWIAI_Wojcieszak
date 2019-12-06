@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <input type="text" name="Polak" id="Polak">Polak <br>
+    <input type="text" name="Nowak" id="Nowak">Nowak <br>
+    <input type="text" name="Rysik" id="Rysik">Rysik <br>
+    <input type="button" id="guzior" value="wyznacz" onclick="myFunction()">
+    <p id="apostrof"></p>
+    <script>
+      function myFunction(){
+        var Polak = document.getElementById("Polak").value;
+        var Nowak = document.getElementById("Nowak").value;
+        var Rysik = document.getElementById("Rysik").value;
+        if(isNaN(Polak) || isNaN(Rysik) || isNaN(Nowak)){
+          document.getElementById("apostrof").innerHTML="Wpisz poprawne dane";
+        }
+        else {
+          Polak = parseFloat(Polak);
+          Nowak = parseFloat(Nowak);
+          Rysik = parseFloat(Rysik);
+            switch (Math.max(Polak,Nowak,Rysik)) {
+              case Polak:
+              document.getElementById("apostrof").innerHTML = "Najwyższa średnia to: "+Polak;
+              break;
+              case Nowak:
+              document.getElementById("apostrof").innerHTML = "Najwyższa średnia to: "+Nowak;
+              break;
+              case Rysik:
+              document.getElementById("apostrof").innerHTML = "Najwyższa średnia to: "+Rysik;
+              break;
+            }
+          }
+        }
+    </script>
+  </body>
+</html>
