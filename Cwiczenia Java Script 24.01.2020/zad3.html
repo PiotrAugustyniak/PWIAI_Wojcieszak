@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <div name="div1"id="div1" ng-app="">
+      <form name="f">
+        <input ng-model="naz" required type="text" name="naz" id="p" placeholder="Podaj imię i nazwisko"><br>
+        <input ng-model="data" required type="text" name="data" id="d" placeholder="podaj date urodzenia"><br>
+        <input ng-model="pesel" required type="text" name="pesel" id="e" placeholder="podaj pesel">
+        <input type="button" value="twoje dane" onclick="check()">
+      </form>
+      <p id="dane" ng-if="!f.naz.$valid">Wpisz cos do pola imie i nazwisko</p>
+      <p id="ee" ng-if="!f.data.$valid">Wpisz cos do pola data</p>
+      <p id="ff" ng-if="!f.pesel.$valid">Wpisz cos do pola pesel</p>
+      <p id="informacja"></p>
+    </div>
+      <script>
+        function check(){
+          var n = document.f.naz.value;
+          var d = document.f.data.value;
+          var p = document.f.pesel.value;
+          var nazwisko = /^[A-Z][a-z]{2,}\s[A-Z][a-z]{2,}(-[A-Z][a-z]{2,})?$/;
+          if(!nazwisko.test(n)){
+            document.getElementById("informacja").innerHTML += "bledne imie i nazwisko";
+          }else{document.getElementById("informacja").innerHTML += n;}
+
+
+        }
+      </script>
+  </body>
+</html>

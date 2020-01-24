@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <header>
+    <input type="button" name="losowanie" value="losuj_cytat" onclick="losowanie()">
+    <input type="button" name="dodawanie" value="dodaj_cytat" onclick="dodawanie()">
+    <input type="button" name="usuwanie" value="usun_cytat" onclick="usuwanie()">
+    </header>
+    <article>
+      <script>
+        var cytaty = ['Cytat1','Cytat2','Cytat3'];
+        numer = 1;
+        setInterval(losowanie,1000);
+        function losowanie(){
+          var indeks = Math.floor(Math.random() * (cytaty.length-1 - 0 + 1)) + 0;
+          document.querySelector("#apostrof").innerHTML = cytaty[indeks];
+        }
+        function dodawanie(){
+         dodawanyElement = prompt("Dodaj element!");
+         while(dodawanyElement !=null){
+           cytaty.push(dodawanyElement);
+           dodawanyElement=prompt("Chcesz dodac cos jeszcze?("+numer+")");
+           numer++;
+         }
+        };
+        function usuwanie(){
+          if(cytaty.length>3){
+          var czyUsunac = confirm("Czy chcesz usunac ostatni cytat?")
+          if(czyUsunac == true) cytaty.pop(); else return;
+        }
+          else alert("Nie mozna usunac bazowych cytatów");
+        };
+        console.log(cytaty);
+      </script>
+      <p id="apostrof"></p>
+    </article>
+  </body>
+</html>

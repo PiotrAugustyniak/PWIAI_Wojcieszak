@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Formularz</title>
+    <style media="screen">
+      *{
+        margin:0;
+        padding:0;
+      }
+      input{
+      margin:2px;
+      }
+      main{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+      }
+      fieldset{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+        flex-direction:column;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <form id="formularz" action="index.html" method="post">
+        <fieldset>
+          <legend>Formularz</legend>
+          <label for="nazwisko">Nazwisko</label><input type="text" size="40" maxlength="35" id="nazwisko" placeholder="nazwisko"><br>
+          <label for="password">Hasło</label><input type="password" size="25" maxlength="20" id="password" placeholder="Hasło">
+          <p>Uczestniczysz w balu ?</p>
+          <article>
+          <label for="radio1">Tak</label><input type="radio" id="radio1" name="bal" value="Tak">
+          <label for="radio2">Nie</label><input type="radio" id="radio2" name="bal" value="Nie">
+          <label for="radio3">Nie wiem</label><input type="radio" id="radio3" name="bal" value="Nie wiem"><br>
+          </article>
+          <p>Jakie pyszne jedzonko wybierasz(więcej niż 1 opcja)</p>
+          <article>
+          <label for="checkbox1">Kurczaczek</label><input type="checkbox" id=checkbox1 name="jedzonko1" value="Kurczaczek">
+          <label for="checkbox2">Indyczek</label><input type="checkbox" id=checkbox2 name="jedzonko2" value="Indyczek">
+          <label for="checkbox3">Wieprzowinka</label><input type="checkbox" id=checkbox3 name="jedzonko3" value="Wieprzowinka">
+          <label for="checkbox4">Wołowinka</label><input type="checkbox" id=checkbox4 name="jedzonko4" value="Wołowinka">
+          <label for="checkbox5">Jakieś ha tfu rośliny</label><input type="checkbox" id=checkbox5 name="jedzonko5" value="Roślinki"><br>
+          </article>
+          <label for="muzyka">Wybierz muzykę na bal</label><br>
+          <select multiple name="muzyka" id="muzyka" size="3">
+            <optgroup label="Muzyka angielska">
+              <option value="PopAng">Pop</option>
+              <option value="RapAng">Rap</option>
+              <option value="KlasycznaAng">Klasyczna</option>
+            </optgroup>
+            <optgroup label="Muzyka polska">
+              <option value="PopPol">Pop</option>
+              <option value="RapPol">Rap</option>
+              <option value="KlasycznaPol">Klasyczna</option>
+            </optgroup>
+          </select><br>
+          <p>Wielowierszowe pole tekstowe</p>
+          <textarea name="textArea" id="textArea"rows="3" cols="50" placeholder="dodatkowe informacje"></textarea><br>
+          <article><input type="button" name="guzik" onclick="myFunction()" value="Submit"><button type="reset" name="reset">Reset</button></article>
+        </fieldset>
+      </form>
+      <p id="apostrof"></p>
+      <script type="text/javascript">
+        function myFunction(){
+          var nazwisko = document.getElementById("nazwisko").value;
+          var password = document.getElementById("password").value;
+          var bal = document.getElementsByName("bal");
+          if(bal[0].checked) var balOdp = bal[0].value;
+          else if(bal[1].checked) var balOdp = bal[1].value;
+          else if(bal[2].checked) var balOdp = bal[2].value;
+          else alert("Musisz zaznaczyć czy idziesz na bal!");
+          var checkbox1 = document.getElementById("checkbox1").checked;
+          var checkbox2 = document.getElementById("checkbox2").checked;
+          var checkbox3 = document.getElementById("checkbox3").checked;
+          var checkbox4 = document.getElementById("checkbox4").checked;
+          var checkbox5 = document.getElementById("checkbox5").checked;
+          if (checkbox1 == true) var checkbox1Odp = document.getElementById("checkbox1").value;
+          if (checkbox2 == true) var checkbox2Odp = document.getElementById("checkbox2").value;
+          if (checkbox3 == true) var checkbox3Odp = document.getElementById("checkbox3").value;
+          if (checkbox4 == true) var checkbox4Odp = document.getElementById("checkbox4").value;
+          if (checkbox5 == true) var checkbox5Odp = document.getElementById("checkbox5").value;
+          var muzyka = document.getElementById("muzyka").value; // nie dziala miala byc niby tablica a nie jest :(
+          var textArea = document.getElementById("textArea").value;
+          document.getElementById("apostrof").innerHTML = "Nazwisko: "+ nazwisko + "<br>" + "Hasło " + password + "<br>" + "Czy idziesz na bal: " + balOdp + "<br>";
+          if(checkbox1== true)document.getElementById("apostrof").innerHTML += checkbox1Odp+"<br>";
+          if(checkbox2== true)document.getElementById("apostrof").innerHTML += checkbox2Odp+"<br>";
+          if(checkbox3== true)document.getElementById("apostrof").innerHTML += checkbox3Odp+"<br>";
+          if(checkbox4== true)document.getElementById("apostrof").innerHTML += checkbox4Odp+"<br>";
+          if(checkbox5== true)document.getElementById("apostrof").innerHTML += checkbox5Odp+"<br>";
+          document.getElementById("apostrof").innerHTML += textArea;
+        }
+      </script>
+    </main>
+  </body>
+</html>

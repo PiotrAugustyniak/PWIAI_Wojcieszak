@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title> Pudełka niespodzianek </title>
+		<style>
+			.klasa {
+				background-color: red;
+				display: inline;
+				height: 250px;
+				width: 1000px;
+			}
+
+			.pudelko {
+				height: 200px;
+				width: 200px;
+				background-color: blue;
+				border: solid yellow 2px;
+				display: inline-block;
+			}
+			p{
+			display:inline-block;
+			}
+			.zdjecie{
+			height:50px;
+			width:50px;
+			}
+		</style>
+	</head>
+	<body>
+		<div class="klasa">
+
+		</div>
+		<input type="button" onclick="fun1()" value="coś">
+		<input type="button" onclick="fun2()" value="coś jeszcze">
+		<input type="button" onclick="usuwanie()" value="usuwanie">
+		<script>
+			function fun1(){
+				var el = document.createElement("div");
+				el.classList.add("pudelko");
+				document.querySelector(".klasa").appendChild(el);
+			};
+
+			function fun2(){
+				var p = document.createElement("p");
+				var img = document.createElement("img");
+				img.src = "zlom.png";
+				img.classList.add("zdjecie");
+				var tekst = prompt("Podaj ino cos");
+				p.innerHTML = tekst;
+				document.querySelector(".klasa").lastChild.appendChild(p);
+				document.querySelector(".klasa").lastChild.appendChild(img);
+			};
+			function usuwanie(){
+			document.querySelector(".klasa").remove.last(document.querySelector(".klasa"));
+			};
+		</script>
+	</body>
+</html>

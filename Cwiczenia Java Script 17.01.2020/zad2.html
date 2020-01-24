@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <header>
+    <input type="button" name="zmianaRozmiaru" value="Zmień Rozmiar Swojego Zdjęcia" onclick="zmianaRozmiaru()">
+    <input type="button" name="ZmianaRozmiaru" value="Zmień Link Zdjęcia" onclick="zmianaHrefa()">
+    <input type="button" name="Default" value="Defaultowe rozmiary" onclick="DefaultoweZdjecie()">
+    </header>
+    <article>
+      <script>
+      //  var zdjecie = document.getElementById("img123");
+        //var wysokoscStandard = zdjecie.naturalHeight;
+      //  var szerokoscStandard = zdjecie.naturalWidth;
+        function zmianaRozmiaru(){
+          var wysokosc = prompt("Podaj wysokosc dla zdjecia");
+          var szerokosc = prompt("Podaj szerokosc dla zdjecia");
+          if(wysokosc != null && szerokosc != null){
+            document.querySelector("#img123").setAttribute("height",wysokosc);
+            document.querySelector("#img123").setAttribute("width", szerokosc);
+
+          }
+        };
+        function zmianaHrefa(){
+          var link = prompt("Podaj do jakiego linku chcesz przekierowywac");
+          if(link != null){
+            document.querySelector("#link").setAttribute("href",link);
+
+          }
+        };
+      //  function DefaultoweZdjecie(){
+        //  if(wysokoscStandard != null && szerokoscStandard != null){
+          //  document.querySelector("#img123").setAttribute("height",wysokoscStandard+"px");
+            //document.querySelector("#img123").setAttribute("width", szerokoscStandard+"px");
+//
+  //        }
+    //    };
+      </script>
+      <a id="link"href="https://www.youtube.com/watch?v=s78iWzHggkM"><img id="img123" src=doge.jpg/></a>
+    </article>
+  </body>
+</html>
