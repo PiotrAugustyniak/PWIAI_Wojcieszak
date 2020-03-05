@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <style>
+      button{
+        margin-right:10px;
+      }
+      li{
+        margin-top:10px;
+        margin-bottom:10px;
+      }
+      .btn{
+        transition:0.3s;
+        opacity:0.6;
+      }
+      .btn:hover{
+        opacity:1;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="border">
+    <div class="row">
+      <div class="col-md-12 d-flex flex-row justify-content-center align-items-center">
+    <button class="btn btn-danger" type="button" id="guzior1" name="dodawanie">Dodaj pozycję do listy</button>
+    <button class="btn btn-danger" type="button" id="guzior2" name="usuwanie">Usuń ostatni element z listy</button>
+    <button class="btn btn-danger" type="button" id="guzior3" name="zamykanie">Zamknij listę</button>
+    <button class="btn btn-danger" type="button" id="guzior4" name="usuwanieListy">Usuń całą listę</button>
+    </div>
+    </div>
+    <div class="row d-flex flex-column justify-content-center align-items-center ">
+      <div class="col-md-8">
+      <ol class="list-group" id="lista">
+      </ol>
+      </div>
+      </div>
+      </div>
+
+    <script>
+      var guzDodaj = document.getElementById("guzior1");
+      var guzUsunEl = document.getElementById("guzior2");
+      var guzZamknij = document.getElementById("guzior3");
+      var guzUsunListe = document.getElementById("guzior4");
+      function dodawanie(){
+        var element = document.createElement("li");
+        var matka = document.getElementById("lista");
+        element.innerText = prompt("Co chciałbyś dodać?");
+        element.className = "list-group-item list-group-item-warning";
+        matka.appendChild(element);
+      };
+      function usuwanie(){
+        var matka = document.getElementById("lista");
+        matka.lastChild.remove();
+      };
+      function usuwanieListy(){
+        var matka = document.getElementById("lista");
+        matka.innerHTML="";
+      };
+      function zamykanie(){
+        guzDodaj.removeEventListener('click',dodawanie);
+        guzUsunEl.removeEventListener('click',usuwanie);
+        guzUsunListe.removeEventListener('click',usuwanieListy);
+      }
+      guzDodaj.addEventListener('click',dodawanie);
+      guzUsunEl.addEventListener('click',usuwanie);
+      guzZamknij.addEventListener('click',zamykanie);
+      guzUsunListe.addEventListener('click',usuwanieListy);
+    </script>
+  </body>
+</html>
